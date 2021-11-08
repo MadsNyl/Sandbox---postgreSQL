@@ -66,8 +66,8 @@ exports.updatePerson = async (req, res) => {
 exports.deletePerson = async (req, res) => {
     const id = req.params.id
     try {
-        deletedPerson = await pool.query('DELETE FROM person WHERE id = $1', [id])
-        res.status(200).json(this.deletedPerson)
+        const deletedPerson = await pool.query('DELETE FROM person WHERE id = $1', [id])
+        res.status(200).json(deletedPerson)
     } catch(error) {
         res.status(500).json({ message: error.message })
     }

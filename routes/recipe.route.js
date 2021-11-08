@@ -6,16 +6,16 @@ const controller = require('../controllers/recipe.controller')
 router.get('/', controller.getAllRecipes)
 
 // get recipe by id
-router.get('/:id', )
+router.get('/:id', controller.getRecipeById)
 
 // create recipe
 router.post('/', controller.createRecipe)
 
 // edit recipe
-router.put('/:id', )
+router.put('/:id', controller.editRecipe)
 
 // delete recipe
-router.delete('/:id', )
+router.delete('/:id', controller.deleteRecipe)
 
 
 module.exports = router
