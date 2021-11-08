@@ -26,6 +26,7 @@ exports.getPersonById = async (req, res) => {
 // get person by first name
 exports.getPersonByName = async (req, res) => {
     const query = req.query.q
+    console.log(query)
     try{
         const person = await pool.query('SELECT * FROM person WHERE firstname LIKE $1', [query])
         res.status(200).json(person)

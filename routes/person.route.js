@@ -10,7 +10,7 @@ router.get('/', controller.getAllPersons)
 router.get('/:id', controller.getPersonById)
 
 // get person by first name
-router.get('/', controller.getPersonByName)
+router.get('/p', controller.getPersonByName)
 
 // create person
 router.post('/', controller.createPerson)
